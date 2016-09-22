@@ -1,18 +1,35 @@
 {
   "name": "graphql-schema-version",
-  "author": "jden <jason@denizac.org>",
+  "author": "jason denizac <jason@denizac.org>",
   "version": "1.0.0",
   "description": "derive a semver version number from a graphql schema",
-  "keywords": ["graphql version semver"],
+  "keywords": [
+    "graphql",
+    "version",
+    "schema",
+    "semver",
+    "semantic",
+    "semantic version",
+    "semantic versioning"
+  ],
   "main": "index.js",
   "scripts": {
-    "test": "standard && mochi"
+    "build:fixtures": "node test/fixtures/generateJson",
+    "lint": "standard",
+    "test": "npm run lint && npm run build:fixtures && npm run tests",
+    "tests": "mocha",
+    "tests:watch": "mocha --watch"
   },
   "repository": "git@github.com:jden/graphql-schema-version.git",
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mochi": "0.3.0",
-    "standard": "^4.0.1"
+    "chai": "^3.5.0",
+    "graphql": "^0.7.0",
+    "mocha": "^3.0.2",
+    "standard": "^8.1.0"
+  },
+  "dependencies": {
+    "semver": "^5.3.0"
   }
 }
