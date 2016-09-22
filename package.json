@@ -1,0 +1,18 @@
+{
+  "name": "graphql-schema-version",
+  "author": "jden <jason@denizac.org>",
+  "version": "1.0.0",
+  "description": "derive a semver version number from a graphql schema",
+  "keywords": ["graphql version semver"],
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && mochi"
+  },
+  "repository": "git@github.com:jden/graphql-schema-version.git",
+  "license": "ISC",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mochi": "0.3.0",
+    "standard": "^4.0.1"
+  }
+}
