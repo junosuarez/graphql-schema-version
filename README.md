@@ -1,6 +1,7 @@
 # graphql-schema-version
 derive a semver version number from a graphql schema
 
+[![Build Status](https://travis-ci.org/jsdnxx/graphql-schema-version.svg?branch=master)](https://travis-ci.org/jsdnxx/graphql-schema-version)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 
