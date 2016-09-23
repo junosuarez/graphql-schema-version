@@ -23,7 +23,7 @@ const INCREMENT_PATCH = 1
 const INCREMENT_NONE = 0
 
 class SetPair {
-  constructor (a, b, identityFn = x => x) {
+  constructor (a = [], b = [], identityFn = x => x) {
     this.a = a
     this.b = b
     this.identityFn = identityFn
