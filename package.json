@@ -1,7 +1,7 @@
 {
   "name": "graphql-schema-version",
   "author": "jason denizac <jason@denizac.org>",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "derive a semver version number from a graphql schema",
   "keywords": [
     "graphql",
