@@ -124,8 +124,8 @@ describe('graphql-schema-version', () => {
     expect(graphqlSchemaVersion(newSchema, oldSchema, oldVersion)).to.equal('1.1.0')
   })
 
-  it.only('increments major version on new mutation types', () => {
+  it.only('parses with input fields', () => {
     newSchema = require('./fixtures/mutationTypes.json')
-    expect(graphqlSchemaVersion(newSchema, newSchema, oldVersion)).to.equal('2.0.0')
+    expect(graphqlSchemaVersion(newSchema, newSchema, oldVersion)).to.equal('1.0.0')
   })
 })
