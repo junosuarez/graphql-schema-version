@@ -81,11 +81,19 @@ class Pair {
 // (Schema, Schema?) => SemverString
 function graphqlSchemaVersion (newSchema, oldSchema = null, oldVersion = DEFAULT_VERSION) {
   if (!oldSchema) { return oldVersion }
-  const increment = diffSchema(new Pair(newSchema, oldSchema).map(buildClientSchema))
+
+  const increment = diffSchema(new Pair(newSchema, oldSchema)
+      .map(normalizeSchema)
+      .map(buildClientSchema))
   if (increment === INCREMENT_NONE) { return oldVersion }
   if (increment < INCREMENT_MINOR) { return semver.inc(oldVersion, 'patch') }
   if (increment < INCREMENT_MAJOR) { return semver.inc(oldVersion, 'minor') }
   if (increment === INCREMENT_MAJOR) { return semver.inc(oldVersion, 'major') }
+}
+
+function normalizeSchema (schema) {
+  if (schema.data) { return schema.data }
+  return schema
 }
 
 function diffSchema (schemas) {

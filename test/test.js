@@ -29,6 +29,11 @@ describe('graphql-schema-version', () => {
     expect(graphqlSchemaVersion(newSchema)).to.equal('1.0.0')
   })
 
+  it('works if the top-level `data` property is present in the json', () => {
+    const schema = {data: newSchema}
+    expect(graphqlSchemaVersion(schema, schema)).to.equal('1.0.0')
+  })
+
   it('increments patch version if field is deprecated', () => {
     newSchema = cloneBaseSchema()
     const heroField = newSchema.__schema.types[0].fields[0]
