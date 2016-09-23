@@ -20,7 +20,7 @@
     "tests": "mocha",
     "tests:watch": "mocha --watch"
   },
-  "repository": "git@github.com:jden/graphql-schema-version.git",
+  "repository": "git@github.com:jsdnxx/graphql-schema-version.git",
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {

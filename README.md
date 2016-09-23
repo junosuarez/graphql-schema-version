@@ -55,7 +55,7 @@ From package root:
 
 ## contributors
 
-- jden <jason@denizac.org>
+- jason@denizac.org
 
 
 ## todo
@@ -64,4 +64,4 @@ From package root:
 
 ## license
 
-ISC. (c) MMXVI jden <jason@denizac.org>. See LICENSE.md
+ISC. (c) MMXVI jason@denizac.org. See LICENSE.md
