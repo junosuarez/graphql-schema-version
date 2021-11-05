@@ -87,7 +87,7 @@ describe('graphql-schema-version', () => {
     newSchema = require('./fixtures/fieldArgumentTypeChanged.json')
     expect(graphqlSchemaVersion(newSchema, oldSchema, oldVersion)).to.equal('2.0.0')
   })
-  it.only('increments major version if a field type is changed and a type is added', () => {
+  it('increments major version if a field type is changed and a type is added', () => {
     newSchema = require('./fixtures/fieldTypeChangedAndTypeAdded.json')
     expect(graphqlSchemaVersion(newSchema, oldSchema, oldVersion)).to.equal('2.0.0')
   })
