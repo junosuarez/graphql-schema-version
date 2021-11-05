@@ -88,7 +88,7 @@ function graphqlSchemaVersion (newSchema, oldSchema = null, oldVersion = DEFAULT
   if (increment === INCREMENT_NONE) { return oldVersion }
   if (increment < INCREMENT_MINOR) { return semver.inc(oldVersion, 'patch') }
   if (increment < INCREMENT_MAJOR) { return semver.inc(oldVersion, 'minor') }
-  if (increment === INCREMENT_MAJOR) { return semver.inc(oldVersion, 'major') }
+  return semver.inc(oldVersion, 'major')
 }
 
 function normalizeSchema (schema) {
